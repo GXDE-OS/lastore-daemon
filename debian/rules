@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+export GOPATH := /usr/share/gocode
+
+SYSTYPE=$(shell grep Type= /etc/deepin-version|cut -d= -f 2)
+
+depend_ostree = true
+
+ifdef depend_ostree
+	DistDepends += ostree,
+endif
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install --sourcedir=debian/tmp
+
+override_dh_installdeb:
+	dh_installdeb
+	@echo "Remove unused conffiles which lastore-daemon should skip them."
+	find debian -name "conffiles" -exec rm -f \{\} \;
+
+override_dh_strip:
+	true
+
+ifeq ($(DEB_BUILD_ARCH), mipsel)
+override_dh_auto_test:
+
+endif
+
+ifdef DistDepends
+override_dh_gencontrol:
+	dh_gencontrol -- -Vdist:Depends="$(DistDepends)"
+endif

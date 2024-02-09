@@ -1,0 +1,11 @@
+[Unit]
+Description=Update lastore metadata info
+
+
+[Service]
+Restart=on-failure
+RestartSec=1min
+
+TimeoutStartSec=infinity
+
+ExecStart=/var/lib/lastore/scripts/update_metadata_info -now
