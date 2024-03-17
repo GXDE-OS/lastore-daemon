@@ -34,7 +34,7 @@ var CMDSmartMirror = cli.Command{
 	Flags: []cli.Flag{
 		cli.StringFlag{
 			Name:  "official",
-			Value: "http://packages.deepin.com/deepin",
+			Value: "http://mirrors.tuna.tsinghua.edu.cn/debian/",
 			Usage: "the official package repository",
 		},
 		cli.StringFlag{

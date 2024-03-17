@@ -141,8 +141,8 @@ func SystemArchitectures() ([]Architecture, error) {
 
 var defaultRepoInfo = RepositoryInfo{
 	Name:   "desktop",
-	Url:    "http://packages.deepin.com/deepin",
-	Mirror: "http://cdn.packages.deepin.com/deepin",
+	Url:    "http://deb.debian.org/debian/",
+	Mirror: "http://mirrors.tuna.tsinghua.edu.cn/debian/",
 }
 
 func init() {
