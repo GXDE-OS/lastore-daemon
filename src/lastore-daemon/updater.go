@@ -244,6 +244,8 @@ const (
 func (u *Updater) restoreSystemSource() error {
 	// write backup file
 	current, err := ioutil.ReadFile(aptSource)
+	return err  // 禁用修复源功能
+	/*
 	if err == nil {
 		err = ioutil.WriteFile(aptSource+".bak", current, 0644)
 		if err != nil {
@@ -259,7 +261,7 @@ func (u *Updater) restoreSystemSource() error {
 	}
 
 	err = ioutil.WriteFile(aptSource, origin, 0644)
-	return err
+	return err*/
 }
 
 func (u *Updater) RestoreSystemSource() *dbus.Error {
