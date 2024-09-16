@@ -1,7 +1,7 @@
 PBUILDER_PKG = pbuilder-satisfydepends-dummy
 
 pwd := ${shell pwd}
-GoPath := GOPATH=${pwd}:${pwd}/vendor:${GOPATH}
+GoPath := GOPATH=/usr/share/gocode-gxde/:${pwd}:${pwd}/vendor:${GOPATH}
 
 GOBUILD = go build
 GOTEST = go test -v
