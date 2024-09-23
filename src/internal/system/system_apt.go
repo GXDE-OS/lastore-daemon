@@ -141,7 +141,7 @@ func SystemArchitectures() ([]Architecture, error) {
 
 var defaultRepoInfo = RepositoryInfo{
 	Name:   "desktop",
-	Url:    "http://deb.debian.org/debian/",
+	Url:    "http://mirrors.tuna.tsinghua.edu.cn/debian/",
 	Mirror: "http://mirrors.tuna.tsinghua.edu.cn/debian/",
 }
 
@@ -156,6 +156,9 @@ func init() {
 }
 
 func DetectDefaultRepoInfo(rInfos []RepositoryInfo) RepositoryInfo {
+	// 强制返回默认源
+	return defaultRepoInfo
+
 	f, err := os.Open("/etc/apt/sources.list")
 	if err != nil {
 		return defaultRepoInfo

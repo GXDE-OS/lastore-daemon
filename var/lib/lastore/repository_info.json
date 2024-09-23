@@ -1,24 +1,24 @@
 [
     {
 	"name": "desktop",
-	"url": "http://packages.deepin.com/deepin",
-	"mirror": "http://cdn.packages.deepin.com/deepin"
+	"url": "http://mirrors.tuna.tsinghua.edu.cn/debian/",
+	"mirror": "http://mirrors.tuna.tsinghua.edu.cn/debian/"
     },
     {
 	"name": "server",
-	"url": "http://packages.deepin.com/deepin-server",
-	"mirror": "http://cdn.packages.deepin.com/deepin-server"
+	"url": "http://mirrors.tuna.tsinghua.edu.cn/debian/",
+	"mirror": "http://mirrors.tuna.tsinghua.edu.cn/debian/"
     },
     {
 	"name": "sunway",
-	"url": "http://packages.deepin.com/sw"
+	"url": "http://mirrors.tuna.tsinghua.edu.cn/debian/"
     },
     {
 	"name": "armhf",
-	"url": "http://packages.deepin.com/armhf"
+	"url": "http://mirrors.tuna.tsinghua.edu.cn/debian/"
     },
     {
 	"name": "loongson",
-	"url": "http://packages.deepin.com/mipsel"
+	"url": "http://mirrors.tuna.tsinghua.edu.cn/debian/"
     }
 ]
